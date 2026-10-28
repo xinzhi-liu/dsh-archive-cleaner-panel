@@ -1,0 +1,3 @@
+- insert:
+    - id: archive-cleaner
+      name: dsh-archive-cleaner-panel

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Archive Cleaner",
+    "description": "Select archived conversations in the default workspace and permanently remove their logs, projection cache, and archive records."
+  }
+}

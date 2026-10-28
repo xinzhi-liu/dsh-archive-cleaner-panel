@@ -1,0 +1,65 @@
+{
+  "name": "dsh-archive-cleaner-panel",
+  "version": "1.0.0",
+  "description": "A DSH Web panel that permanently deletes selected archived conversations in the default workspace.",
+  "license": "MIT",
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "archive",
+    "session",
+    "cleanup"
+  ],
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.1-rc.3 <0.3.0"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets/icon-180.png",
+    "docs/*.png",
+    "screenshots.json",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "main": "index.js",
+  "author": "xinzhi-liu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xinzhi-liu/dsh-archive-cleaner-panel.git"
+  },
+  "homepage": "https://github.com/xinzhi-liu/dsh-archive-cleaner-panel#readme",
+  "bugs": {
+    "url": "https://github.com/xinzhi-liu/dsh-archive-cleaner-panel/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
